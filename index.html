@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   
+
+
+    <div class="container" id="input-display">
+        <div id="customAlert" class="alert-box">
+            <p id="alertMessage">Iin Valid</p>
+            <button onclick="closeAlert()">OK</button>
+          </div>
+    
+        <div class="center">
+          <img src="resources/Logo-small.svg" alt="">
+          <div class="input-div" id="input-div" >
+            <input id="input" type="text" placeholder="Enter an url">
+          </div>
+          <p class="custom-text">enter the URL and press enter</p>
+        </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container-2" id="QR_CODE-display">
+        <img class="logo-2" src="resources/Logo-small.svg" alt="">
+        <div class="qr-code" >
+             <div id="qrcode"></div>
+        </div>
+        <div class="buttons-div">
+             <a href="#" id="downloadBtn" download="QR_CODE/png">
+               Download
+                <img src="resources/Load_circle_duotone.svg" alt=" loading icon">
+              </a>
+             <a href="#" id="share">
+                Share
+                <img src="resources/link_alt.svg" alt=" share icon">
+             </a>
+        </div>
+    </div>
+   
+
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Oswald", sans-serif;
+    background:linear-gradient(-90deg,rgb(5, 1, 43), rgb(1, 101, 151), rgb(4, 31, 36) );
+    color: #333;
+}
+#qrcode{
+    width: 190px;
+    height: 190px;
+    background: rgba(255,255,255,0.3);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+}
+
+
+.container-2{
+    display: none;
+    text-align: center;
+    width: 100%;
+    .buttons-div{
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+
+        #share,#downloadBtn{
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 37, 0.557);
+            display: flex;
+            align-items: center;
+            color: white;
+            gap: 10px;
+            font-weight: 100;
+            padding: 10px 30px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0,255,255,.2);
+            transition: background  300ms ease-in-out;
+            /* text-align: center; */
+            img{
+                width: px;
+            }
+        }
+        #share:hover,#downloadBtn:hover{
+            /* box-shadow: 0 0 10px rgba(255,255,255,.5); */
+            background: rgba(1, 1, 38, 0.79);
+        }
+        
+    }
+    .logo-2{
+        margin-bottom: 100px;
+        margin-top: 60px;
+    }
+ }
+
+
+
+
+ .container{
+    margin-top: 250px;
+    text-align: center;
+    width: 100%;
+    img{
+        width: 170px;
+    }
+    .input-div{
+        width: 80%;
+        /* max-width: 60%; */
+        padding: 0 10px;
+        border: 1px solid #333;
+        margin: 0 auto;
+        background-color: rgba(255,255,255,.2);
+        border: 5px solid rgba(0, 0, 48, 0.701);
+        border-radius: 15px;
+        margin-top: 25px;
+        position: relative;
+    }
+    input{
+        width: 100%;
+        padding: 20px 10px;
+        outline: none;
+        border: none;
+
+        background-color: transparent;
+        white-space:wrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflowing text */
+        text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+        font-size: 0,8rem;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+       
+        
+    }
+    .input-div::after{
+        content: 'QR Code';
+        position: absolute;
+        top: 1px;
+        right: 0;
+        background: rgb(0, 9, 51);
+        color: white;
+        padding: 15px 20px;
+        margin-top: 2px;
+        margin-right: 2.5px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    
+   
+}
+.custom-text{
+    margin-top: 20px;
+    color:rgb(255, 255, 255) ;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    text-shadow: 0 0 0px rgb(39, 51, 179,.5);
+}
+
+/*custum alert box*/
+.alert-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -180%);
+    background-color:rgba(28, 68, 103, 0.8);
+    border:none;
+    padding: 20px 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: white;
+    font-size: 0.85rem;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1000;
+    display: none;
+  }
+  
+  .alert-box button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    /* border: none; */
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 15px;
+  }
+  
+  .alert-box button:hover {
+    background-color: #0056b3;
+  }
+
+  #qrcode .img{
+    border-radius: 20px;
+  }
+
+  @media screen  and (min-width: 500px){
+    .input-div{
+        max-width: 50%;
+    }
+  }
