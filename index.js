@@ -48,13 +48,20 @@ function closeAlert(){
 }
 
 downloadBtn.addEventListener('click', () => {
-    const qrCodeImg = document.querySelector('#qrcode img'); // Select the QR code image
-    if (qrCodeImg) {
-        const imgSrc = qrCodeImg.getAttribute('src'); // Get the image source
-        downloadBtn.setAttribute('href', imgSrc); // Set the href for the download link
-        downloadBtn.setAttribute('download', 'qr_code.png'); // Set the download attribute with a filename
+    const qrCodeCanvas = document.querySelector('#qrcode canvas'); // Select the QR code canvas
+    if (qrCodeCanvas) {
+        qrCodeCanvas.toBlob((blob) => {
+            const url = URL.createObjectURL(blob); // Create a URL for the blob
+            const a = document.createElement('a'); // Create a temporary anchor element
+            a.href = url;
+            a.download = 'qr_code.png'; // Set the filename
+            document.body.appendChild(a); // Append the anchor to the body
+            a.click(); // Trigger the download
+            document.body.removeChild(a); // Remove the anchor after download
+            URL.revokeObjectURL(url); // Revoke the blob URL to free memory
+        }, 'image/png');
     } else {
-        console.error('QR code image not found!');
+        console.error('QR code canvas not found!');
     }
 });
 
